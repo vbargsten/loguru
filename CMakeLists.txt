@@ -20,7 +20,7 @@ set(LOGURU_USE_FMTLIB_DEF "0")
 if (${LOGURU_USE_FMTLIB})
     set(LOGURU_USE_FMTLIB_DEF "1")
     find_package(fmt REQUIRED)
-    target_link_libraries("${PROJECT_NAME}" fmt)
+    target_link_libraries("${PROJECT_NAME}" fmt::fmt)
 endif()
 
 target_link_libraries("${PROJECT_NAME}" pthread dl)
